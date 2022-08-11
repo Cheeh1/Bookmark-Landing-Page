@@ -94,14 +94,6 @@ nav {
   gap: 63%;
 }
 
-.intro {
-  display: flex;
-  margin: {
-    top: 80px;
-    left: 150px;
-    right: 50px;
-  }
-}
 
 /* Mobile Nav bar*/
 .show-modal {
@@ -211,6 +203,15 @@ hr {
   display: none;
 }
 
+.intro {
+  display: flex;
+  margin: {
+    // top: 80px;
+    left: 150px;
+    right: 50px;
+  }
+}
+
 // styling for the right background
 .intro::after {
   content: "";
@@ -220,7 +221,7 @@ hr {
   position: absolute;
   background-color: $softBlue;
   right: -1%;
-  top: 60%;
+  top: 50%;
   border-top-left-radius: 150px;
   border-bottom-left-radius: 150px;
   z-index: -1;
@@ -230,7 +231,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-top: 20px;
+  // margin-top: 20px;
 
   .intro-header {
     font-size: 35px;
@@ -292,7 +293,6 @@ hr {
   .nxt-header {
     font-size: 30px;
     color: $veryDarkBlue;
-    margin-bottom: 25px;
   }
 
   .nxt-paragraph {
@@ -301,6 +301,7 @@ hr {
     width: 35%;
     height: 10%;
     text-align: center;
+    margin-top: -20px;
   }
 }
 
@@ -308,7 +309,7 @@ hr {
   display: flex;
   justify-content: center;
   gap: 100px;
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 70px;
   font-weight: 600;
 }
@@ -329,11 +330,11 @@ hr {
 
 // <hr> styling
 .line-1 {
-  display: block;
+  display: none;
   margin: {
-    top: 18px;
-    left: 20%;
-    right: 58%;
+    top: 20px;
+    left: 280px;
+    right: 800px;
   }
   border: 3px solid $softRed;
   background-color: $softRed;
@@ -344,8 +345,12 @@ hr {
   margin: {
     left: 20%;
     right: 20%;
+    top: 20px;
   }
-  border: 1px solid rgb(231, 227, 227);
+  border: 2px solid rgb(197, 195, 195);
+}
+.line-mobile {
+  display: none;
 }
 
 .btn {
@@ -354,7 +359,7 @@ hr {
   gap: 8%;
   margin: {
     left: 80px;
-    top: 40px;
+    top: 100px;
   }
 }
 
@@ -367,7 +372,7 @@ hr {
   position: absolute;
   background-color: $softBlue;
   left: -1%;
-  top: 215%;
+  top: 230%;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 150px;
   z-index: -1;
@@ -595,6 +600,17 @@ hr {
   cursor: pointer;
 }
 
+.bkm-text {
+  font-size: 20px;
+  width: 55%;
+  color: hsl(228, 21%, 24%);
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 .bkm-header:hover {
   color: $softRed;
 }
@@ -620,6 +636,10 @@ hr {
 
 .bkm-logo-4 {
   margin-left: -1%;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .bgd-button {
@@ -837,7 +857,7 @@ hr {
 
   .intro {
     flex-direction: column-reverse;
-    margin-top: 90px;
+    // margin-top: 30px;
     margin-left: 50px;
   }
   .intro-img {
@@ -850,11 +870,11 @@ hr {
     top: 40%;
     width: 80%;
     left: 30%;
-    height: 30%;
+    height: 35%;
   }
 
   .intro-1 {
-    margin-top: 70px;
+    // margin-top: 70px;
     text-align: center;
 
     .intro-header {
@@ -865,7 +885,7 @@ hr {
 
     .intro-paragraph {
       font-size: 15px;
-      margin-top: 20px;
+      margin-top: -25px;
       width: 110%;
       margin-left: -20px;
     }
@@ -886,34 +906,46 @@ hr {
     margin-left: 5px;
 
     .nxt-header {
+      margin-top: -15px;
       font-size: 20px;
     }
 
     .nxt-paragraph {
+      margin-top: -30px;
       font-size: 15px;
       width: 85%;
     }
   }
 
   .select {
-    gap: 5px;
-    margin-left: 20px;
-    font-size: 15px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .line-1 {
-    margin-left: 3%;
-    margin-right: 65%;
+    display: none;
   }
 
   .line-2 {
     margin-left: 3%;
     margin-right: 5%;
-    border: 1px solid rgb(235, 223, 223);
+    border: 1px solid rgb(231, 227, 227);
+  }
+
+  .line-mobile {
+    display: block;
+    margin-left: 3%;
+    margin-right: 5%;
+    border: 1px solid rgb(231, 227, 227);
   }
 
   .btn {
     flex-direction: column;
+    margin-top: 170px;
   }
 
   .btn-img {
@@ -926,7 +958,7 @@ hr {
   .btn::before {
     width: 75%;
     height: 40%;
-    top: 265%;
+    top: 310%;
   }
 
   .btn-2 {
@@ -1020,9 +1052,14 @@ hr {
   }
 
   .bkm-header {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
   }
+
+  .bkm-text {
+    font-size: 15px;
+    width: 80%;
+  } 
 
   .bkm-logo-1 {
     margin-left: 30%;
