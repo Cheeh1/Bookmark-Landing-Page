@@ -16,20 +16,19 @@ const openModal = function () {
 };
 
 for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', openModal);
+  btnsOpenModal[i].addEventListener("click", openModal);
 
-  btnCloseModal.addEventListener('click', closeModal);
-  
+btnCloseModal.addEventListener("click", closeModal);
 
-  //for the Esc key
-  document.addEventListener('keydown', function (e) {
-   if (e.key === 'Escape' && !modal.classList.contains ('hidden')) {
-       closeModal();
-   }
-  }); 
+//for the Esc key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+}); 
 
 
-  //Frequently Asked Question
+//Frequently Asked Question
 var question1 = document.getElementById("btn");
 var answer1 = document.getElementById("txt");
 var icon1 = document.getElementById("icon");
@@ -60,4 +59,31 @@ var icon4 = document.getElementById("icon04");
 question4.addEventListener("click", function () {
   answer4.classList.toggle("visible");
   icon4.classList.toggle("rotate");
+});
+
+
+//TAB VIEW
+const btns = document.querySelectorAll('.link');
+
+btns.forEach(function (btn) {
+   btn.addEventListener('click', function (e) {
+      const style = e.currentTarget.classList;
+      const firstTab = document.querySelector('.frst-tab');
+      const secondTab =  document.querySelector('.scnd-tab');
+      const thirdTab = document.querySelector('.third-tab');
+
+      if (style.contains('scndLink')) {
+         firstTab.classList.add('active');
+         secondTab.classList.remove('active');
+         thirdTab.classList.add('active'); 
+      } else if (style.contains('thirdLink')) {
+         firstTab.classList.add('active');
+         secondTab.classList.add('active');
+         thirdTab.classList.remove('active');  
+      } else {
+         firstTab.classList.remove('active');
+         secondTab.classList.add('active');
+         thirdTab.classList.add('active');  
+      }
+   });
 });
