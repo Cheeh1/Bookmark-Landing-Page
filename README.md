@@ -8,4 +8,6 @@ Thanks for checking out my github reprository.
 
 This is a solution to help users get a clean and simple interface to organise their favourite websites and to make it quick and easy for them to access their favourite websites.
 
-## This project was built using HTML, CSS and SASS.
+## This project was built using HTML, CSS (SASS) and JAVASCRIPT.
+
+### Dark mode, tab view, accordion and email validation implemented.
