@@ -33,6 +33,27 @@ body {
   box-sizing: border-box;
 }
 
+// Dark mode button
+.dark-mode {
+  padding: 10px 10px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 600px;
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 15px;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 2px 2px;
+}
+@media screen and (max-width: 480px) {
+  .dark-mode {
+    margin-left: 125px;
+    margin-bottom: -20px;
+    // margin-top: -2px;
+  }
+}
+
 // Nesting rule for the nav bar
 nav {
   display: flex;
@@ -173,19 +194,6 @@ hr {
   z-index: 2;
 }
 
-.logo {
-  width: 10%;
-  height: 5%;
-  fill: #fff;
-}
-
-.fb {
-  margin-left: 90px;
-}
-.tw {
-  margin-left: 30px;
-}
-
 .scnd-nav {
   display: flex;
   justify-content: space-evenly;
@@ -290,6 +298,7 @@ hr {
   .nxt-header {
     font-size: 30px;
     color: $veryDarkBlue;
+    margin-bottom: -20px;
   }
 
   .nxt-paragraph {
@@ -425,11 +434,12 @@ hr {
   .ext-header {
     font-size: 23px;
     color: $veryDarkBlue;
-    margin-bottom: 20px;
+    // margin-bottom: -15px;
     font-weight: 500;
   }
 
   .ext-paragraph {
+    margin-top: -30px;
     font-size: 20px;
     width: 39%;
     height: 10%;
@@ -542,7 +552,7 @@ hr {
 .bgd-header {
   font-size: 30px;
   color: $veryDarkBlue;
-  margin-bottom: 20px;
+  margin-bottom: -2px;
 }
 
 .bgd-paragraph {
@@ -775,6 +785,8 @@ hr {
     // to make the logo clickable
     .logo {
       cursor: pointer;
+      width: 40%;
+      height: 50%;
     }
 
     // to add hover effect to the logo
@@ -836,27 +848,22 @@ hr {
   left: 350%;
 }
 
+.bkmark {
+  margin-left: 30px;
+}
+
+.show-modal {
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
 .mobile-logo {
-    margin-right: -100px;
-    margin-bottom: 15px;
+  margin-right: -100px;
+  margin-bottom: 15px;
 }
 
 hr {
   margin-right: -200px;
-}
-
-.logo {
-  position: absolute;
-  width: 30%;
-  height: 15%;
-}
-
-.fb {
-  left: -10%;
-}
-
-.tw {
-   left: 160%;
 }
 
   .intro {
@@ -915,7 +922,7 @@ hr {
     }
 
     .nxt-paragraph {
-      margin-top: -30px;
+      margin-top: -5px;
       font-size: 15px;
       width: 85%;
     }

@@ -87,3 +87,85 @@ btns.forEach(function (btn) {
       }
    });
 });
+
+// Dark Mode
+// const darkBtn = document.querySelector('#mode');
+
+//    darkBtn.addEventListener('click', function () {
+//       const body = document.getElementById('body');
+//       body.style.backgroundColor = "#121212";
+
+//      const header = document.querySelectorAll('#head');
+//       header.forEach(function (heads) {
+//          heads.style.color = "rgb(56, 77, 170)";
+//       });
+
+//       const paragraph = document.querySelectorAll('#text');
+//       paragraph.forEach(function (text) {
+//          text.style.color = "#fff";
+//       });
+
+//       const lines = document.querySelectorAll('#line');
+//       lines.forEach(function (line) {
+//          line.style.border = "1px solid rgb(53, 51, 51)";
+//       });
+
+//       const lineNavs = document.querySelectorAll('#line-mobile');
+//       lineNavs.forEach(function (lineNav) {
+//          lineNav.style.border = "1px solid rgb(70, 91, 91)";
+//       });
+//    });
+
+//Dark mode
+const darkBtn = document.querySelector('.dark-mode');
+
+   darkBtn.addEventListener('click', function () {
+      const body = document.getElementById('body');
+      body.style.backgroundColor = "#121212";
+
+     const header = document.querySelectorAll('#head');
+      header.forEach(function (head) {
+         head.style.color = "rgb(56, 77, 170)";
+      });
+
+      const paragraph = document.querySelectorAll('#text');
+      paragraph.forEach(function (text) {
+         text.style.color = "#fff";
+      });
+
+      const lines = document.querySelectorAll('#line');
+      lines.forEach(function (line) {
+         line.style.border = "1px solid rgb(53, 51, 51)";
+      });
+
+      const lineNavs = document.querySelectorAll('#line-mobile');
+      lineNavs.forEach(function (lineNav) {
+         lineNav.style.border = "1px solid rgb(217, 235, 235)";
+      });
+
+      const boxShadow = document.querySelectorAll('#box-shadow');
+      boxShadow.forEach(function (shadow) {
+         shadow.style.boxShadow = "10px 10px 30px black, -10px -10px 30px black";
+         shadow.style.backgroundColor = "white";
+      });
+
+      const boxParagraph = document.querySelectorAll('.box-paragraph');
+      boxParagraph.forEach(function (text) {
+         text.style.color = "#000";
+      });
+
+      const bkmHeader = document.querySelectorAll('.bkm-header');
+      bkmHeader.forEach(function (head) {
+         head.style.color = "rgb(56, 77, 170)";
+      });
+
+      const bkmText = document.querySelectorAll('.bkm-text');
+      bkmText.forEach(function (text) {
+         text.style.color = "#fff";
+      });
+
+      const menuBtn = document.querySelectorAll('.show-modal');
+      menuBtn.forEach(function (btn) {
+         btn.style.backgroundColor = "#fff";
+      });
+   });
