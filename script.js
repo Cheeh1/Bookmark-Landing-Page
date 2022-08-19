@@ -88,34 +88,6 @@ btns.forEach(function (btn) {
    });
 });
 
-// Dark Mode
-// const darkBtn = document.querySelector('#mode');
-
-//    darkBtn.addEventListener('click', function () {
-//       const body = document.getElementById('body');
-//       body.style.backgroundColor = "#121212";
-
-//      const header = document.querySelectorAll('#head');
-//       header.forEach(function (heads) {
-//          heads.style.color = "rgb(56, 77, 170)";
-//       });
-
-//       const paragraph = document.querySelectorAll('#text');
-//       paragraph.forEach(function (text) {
-//          text.style.color = "#fff";
-//       });
-
-//       const lines = document.querySelectorAll('#line');
-//       lines.forEach(function (line) {
-//          line.style.border = "1px solid rgb(53, 51, 51)";
-//       });
-
-//       const lineNavs = document.querySelectorAll('#line-mobile');
-//       lineNavs.forEach(function (lineNav) {
-//          lineNav.style.border = "1px solid rgb(70, 91, 91)";
-//       });
-//    });
-
 //Dark mode
 const darkBtn = document.querySelector('.dark-mode');
 
