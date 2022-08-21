@@ -91,53 +91,75 @@ btns.forEach(function (btn) {
 //Dark mode
 const darkBtn = document.querySelector('.dark-mode');
 
-   darkBtn.addEventListener('click', function () {
-      const body = document.getElementById('body');
-      body.style.backgroundColor = "#121212";
+darkBtn.addEventListener("click", function () {
+  const body = document.getElementById("body");
+  body.style.backgroundColor = "#121212";
 
-     const header = document.querySelectorAll('#head');
-      header.forEach(function (head) {
-         head.style.color = "rgb(56, 77, 170)";
-      });
+  const header = document.querySelectorAll("#head");
+  header.forEach(function (head) {
+    head.style.color = "rgb(56, 77, 170)";
+  });
 
-      const paragraph = document.querySelectorAll('#text');
-      paragraph.forEach(function (text) {
-         text.style.color = "#fff";
-      });
+  const paragraph = document.querySelectorAll("#text");
+  paragraph.forEach(function (text) {
+    text.style.color = "#fff";
+  });
 
-      const lines = document.querySelectorAll('#line');
-      lines.forEach(function (line) {
-         line.style.border = "1px solid rgb(53, 51, 51)";
-      });
+  const lines = document.querySelectorAll("#line");
+  lines.forEach(function (line) {
+    line.style.border = "1px solid rgb(53, 51, 51)";
+  });
 
-      const lineNavs = document.querySelectorAll('#line-mobile');
-      lineNavs.forEach(function (lineNav) {
-         lineNav.style.border = "1px solid rgb(217, 235, 235)";
-      });
+  const lineNavs = document.querySelectorAll("#line-mobile");
+  lineNavs.forEach(function (lineNav) {
+    lineNav.style.border = "1px solid rgb(217, 235, 235)";
+  });
 
-      const boxShadow = document.querySelectorAll('#box-shadow');
-      boxShadow.forEach(function (shadow) {
-         shadow.style.boxShadow = "10px 10px 30px black, -10px -10px 30px black";
-         shadow.style.backgroundColor = "white";
-      });
+  const boxShadow = document.querySelectorAll("#box-shadow");
+  boxShadow.forEach(function (shadow) {
+    shadow.style.boxShadow = "10px 10px 30px black, -10px -10px 30px black";
+    shadow.style.backgroundColor = "white";
+  });
 
-      const boxParagraph = document.querySelectorAll('.box-paragraph');
-      boxParagraph.forEach(function (text) {
-         text.style.color = "#000";
-      });
+  const boxParagraph = document.querySelectorAll(".box-paragraph");
+  boxParagraph.forEach(function (text) {
+    text.style.color = "#000";
+  });
 
-      const bkmHeader = document.querySelectorAll('.bkm-header');
-      bkmHeader.forEach(function (head) {
-         head.style.color = "rgb(56, 77, 170)";
-      });
+  const bkmHeader = document.querySelectorAll(".bkm-header");
+  bkmHeader.forEach(function (head) {
+    head.style.color = "rgb(56, 77, 170)";
+  });
 
-      const bkmText = document.querySelectorAll('.bkm-text');
-      bkmText.forEach(function (text) {
-         text.style.color = "#fff";
-      });
+  const bkmText = document.querySelectorAll(".bkm-text");
+  bkmText.forEach(function (text) {
+    text.style.color = "#fff";
+  });
 
-      const menuBtn = document.querySelectorAll('.show-modal');
-      menuBtn.forEach(function (btn) {
-         btn.style.backgroundColor = "#fff";
-      });
-   });
+  const menuBtn = document.querySelectorAll(".show-modal");
+  menuBtn.forEach(function (btn) {
+    btn.style.backgroundColor = "#fff";
+  });
+});
+
+   
+// Email Verification
+const submitBtn = document.getElementById('submit');
+
+submitBtn.addEventListener('click', function () {
+   const text = document.getElementById('username');
+   const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+   const showError = document.querySelector('.error');
+
+   if (text.value.match(mailformat)) {
+      showError.classList.add('error-view');
+      showError.textContent = "Email confirmed.";
+      showError.style.backgroundColor = "green";
+      document.form1.text1.focus();
+      return true;
+   } else {
+      showError.classList.add('error-view');
+      document.form1.text1.focus();
+      return false;
+   }
+});
