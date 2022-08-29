@@ -1,6 +1,6 @@
-// variables
-$softBlue: hsl(231, 69%, 60%);
-$softRed: hsl(0, 94%, 66%);
+// SASS variables
+$softBlue: hsl(231, 61%, 41%);
+$softRed: hsl(0, 62%, 50%);
 $grayishBlue: hsl(229, 8%, 60%);
 $veryDarkBlue: hsl(229, 31%, 21%);
 $myfont: "Rubik", sans-serif;
@@ -20,18 +20,38 @@ $Weights2: 500;
   border: 2px solid $softBlue;
 }
 
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-family: $myfont;
-// }
+// CSS variables for colors used throughout
+// This was mainly used for a better dark mode
+:root {
+  --clr-bcg: #fff;
+  --clr-header: hsl(229, 31%, 21%);
+  --clr-font: hsl(229, 8%, 60%);
+  --clr-primary: hsl(231, 61%, 41%);
+  --clr-secondary: hsl(0, 62%, 50%);
+  --clr-boxShadow1: 10px 10px 30px #ebe6e671;
+  --clr-boxShadow2: -10px -10px 30px #e0e0e0;
+  --clr-boxBreak: rgb(206, 201, 201);
+  --clr-boxBcg: rgba(255, 250, 250, 0.6);
+}
+
+.dark-theme {
+  --clr-bcg: #121212;
+  --clr-header: hsl(229, 50%, 44%);
+  --clr-font: #fff;
+  --clr-primary: hsl(231, 61%, 41%);
+  --clr-secondary: hsl(0, 62%, 50%);
+  --clr-boxShadow1: 10px 10px 30px #000;
+  --clr-boxShadow2: -10px -10px 30px #000;
+  --clr-boxBreak: #000;
+  --clr-boxBcg: #fff;
+}
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: $myfont;
+  background-color: var(--clr-bcg);
 }
 
 // Dark mode button
@@ -83,7 +103,8 @@ nav {
   }
 
   li a {
-    color: $veryDarkBlue;
+    // color: $veryDarkBlue;
+    color: var(--clr-header);
     padding: 10px 16px;
     text-decoration: none;
     font-size: 20px;
@@ -91,7 +112,8 @@ nav {
   }
 
   li a:hover {
-    color: $softRed;
+    // color: $softRed;
+    color: var(--clr-secondary);
   }
 
   .nav-button {
@@ -100,7 +122,8 @@ nav {
     border-radius: 5px;
     border: none;
     left: 30px;
-    background-color: $softRed;
+    // background-color: $softRed;
+    background-color: var(--clr-secondary);
     color: hsl(225, 29%, 97%);
     cursor: pointer;
     font-weight: 600;
@@ -120,6 +143,7 @@ nav {
 /* Mobile Nav bar*/
 .show-modal {
   cursor: pointer;
+  background-color: var(--clr-boxBcg);
 }
 
 .modal {
@@ -225,7 +249,8 @@ hr {
   width: 50%;
   height: 50%;
   position: absolute;
-  background-color: $softBlue;
+  // background-color: $softBlue;
+  background-color: var(--clr-primary);
   right: -1%;
   top: 50%;
   border-top-left-radius: 150px;
@@ -241,7 +266,8 @@ hr {
 
   .intro-header {
     font-size: 35px;
-    color: $veryDarkBlue;
+    // color: $veryDarkBlue;
+    color: var(--clr-header);
     font-weight: $Weights2;
     width: 105%;
     height: 34%;
@@ -250,7 +276,8 @@ hr {
   .intro-paragraph {
     width: 75%;
     height: 24%;
-    color: $grayishBlue;
+    // color: $grayishBlue;
+    color: var(--clr-font);
     font-size: $fontsize;
   }
 
@@ -263,7 +290,8 @@ hr {
     padding: 15px 15px;
     border-radius: 8px;
     border: none;
-    background-color: $softBlue;
+    // background-color: $softBlue;
+    background-color: var(--clr-primary);
     box-shadow: 3px 3px 3px rgb(53, 50, 50);
     color: #fff;
     cursor: pointer;
@@ -282,8 +310,10 @@ hr {
 
   .intro-button-2:hover {
     background-color: #fff;
-    color: $veryDarkBlue;
-    border: 2px solid $veryDarkBlue;
+    // color: $veryDarkBlue;
+    color: var(--clr-header);
+    // border: 2px solid $veryDarkBlue;
+    border: 2px solid --clr-header;
   }
 }
 
@@ -298,13 +328,15 @@ hr {
 
   .nxt-header {
     font-size: 30px;
-    color: $veryDarkBlue;
+    // color: $veryDarkBlue;
+    color: var(--clr-header);
     margin-bottom: -20px;
   }
 
   .nxt-paragraph {
     font-size: 18px;
-    color: $grayishBlue;
+    // color: $grayishBlue;
+    color: var(--clr-font);
     width: 35%;
     height: 10%;
     text-align: center;
@@ -323,17 +355,20 @@ hr {
 }
 
 .select > a:link {
-  color: $grayishBlue;
+  // color: $grayishBlue;
+  color: var(--clr-font);
   text-decoration: none;
 }
 
 .select > a:visited {
-  color: $veryDarkBlue;
+  // color: $veryDarkBlue;
+  color: var(--clr-header);
   text-decoration: none;
 }
 
 .select > a:hover {
-  color: $softRed;
+  // color: $softRed;
+  color: var(--clr-secondary);
 }
 
 // <hr> styling
@@ -344,8 +379,10 @@ hr {
     left: 280px;
     right: 800px;
   }
-  border: 3px solid $softRed;
-  background-color: $softRed;
+  // border: 3px solid $softRed;
+  border: 3px solid --clr-secondary;
+  // background-color: $softRed;
+  background-color: var(--clr-secondary);
 }
 // <hr> styling
 .line-2 {
@@ -383,7 +420,8 @@ hr {
   width: 40%;
   height: 50%;
   position: absolute;
-  background-color: $softBlue;
+  // background-color: $softBlue;
+  background-color: var(--clr-primary);
   left: -1%;
   top: 190%;
   border-top-right-radius: 150px;
@@ -398,7 +436,8 @@ hr {
   h2 {
     font-size: 35px;
     margin-bottom: 25px;
-    color: $veryDarkBlue;
+    // color: $veryDarkBlue;
+    color: var(--clr-header);
   }
 
   p {
@@ -407,14 +446,16 @@ hr {
     height: 30%;
     margin-top: -2px;
     margin-bottom: 30px;
-    color: $grayishBlue;
+    // color: $grayishBlue;
+    color: var(--clr-font);
   }
 
   .btn-button {
     padding: 15px 20px;
     border-radius: 8px;
     border: none;
-    background-color: $softBlue;
+    // background-color: $softBlue;
+    background-color: var(--clr-primary);
     box-shadow: 1px 2px 1px rgb(53, 50, 50);
     color: #fff;
     cursor: pointer;
@@ -434,7 +475,8 @@ hr {
 
   .ext-header {
     font-size: 23px;
-    color: $veryDarkBlue;
+    // color: $veryDarkBlue;
+    color: var(--clr-header);
     // margin-bottom: -15px;
     font-weight: 500;
   }
@@ -445,7 +487,8 @@ hr {
     width: 39%;
     height: 10%;
     text-align: center;
-    color: $grayishBlue;
+    // color: $grayishBlue;
+    color: var(--clr-font);
   }
 }
 
@@ -459,11 +502,11 @@ hr {
 .box-1 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 250, 250, 0.6);
+  background-color: var(--clr-boxBcg);
   padding: 30px 50px 0 50px;
-  // border: 1px solid rgb(177, 177, 177);
   border-radius: 10px;
   box-shadow: 10px 10px 30px #ebe6e671, -10px -10px 30px #e0e0e0;
+  box-shadow: var(--clr-boxShadow1), var(--clr-boxShadow2);
 }
 
 .box--1 {
@@ -485,7 +528,8 @@ hr {
 .box-header {
   font-size: 18px;
   font-weight: 500;
-  color: $veryDarkBlue;
+  // color: $veryDarkBlue;
+  color: var(--clr-header);
   text-align: center;
   margin-bottom: 15px;
   margin-top: 40px;
@@ -493,16 +537,17 @@ hr {
 
 .box-paragraph {
   font-size: 16px;
-  color: $grayishBlue;
+  // color: $grayishBlue;
+  color: var(--clr-boxBreak);
   text-align: center;
 }
 
 .box-break {
   margin-top: 50px;
   margin-bottom: 15%;
-  margin-left: -28%;
-  margin-right: -28%;
-  border: 2px dashed rgb(206, 201, 201);
+  margin-left: -25%;
+  margin-right: -25%;
+  border: 2px dashed var(--clr-boxBreak);
   border-width: 2px;
   height: 2px;
 }
@@ -515,7 +560,8 @@ hr {
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
-  background-color: $softBlue;
+  // background-color: $softBlue;
+  background-color: var(--clr-primary);
   box-shadow: 1px 1px 1px rgb(53, 50, 50);
   color: #fff;
   cursor: pointer;
@@ -552,7 +598,8 @@ hr {
 
 .bgd-header {
   font-size: 30px;
-  color: $veryDarkBlue;
+  // color: $veryDarkBlue;
+  color: var(--clr-header);
   margin-bottom: -2px;
 }
 
@@ -560,7 +607,8 @@ hr {
   font-size: 20px;
   width: 39%;
   height: 10%;
-  color: $grayishBlue;
+  // color: $grayishBlue;
+  color: var(--clr-font);
 }
 
 //Accordion (frequently asked questions)
@@ -609,7 +657,8 @@ hr {
 
 .bkm-header {
   font-size: 23px;
-  color: $veryDarkBlue;
+  // color: $veryDarkBlue;
+  color: var(--clr-header);
   margin-top: 28px;
   margin-bottom: 3px;
   cursor: pointer;
@@ -627,7 +676,8 @@ hr {
 }
 
 .bkm-header:hover {
-  color: $softRed;
+  // color: $softRed;
+  color: var(--clr-secondary);
 }
 
 .bkm-logo-1,
@@ -661,7 +711,8 @@ hr {
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
-  background-color: $softBlue;
+  // background-color: $softBlue;
+  background-color: var(--clr-primary);
   box-shadow: 1px 2px 1px rgb(53, 50, 50);
   color: #fff;
   margin-left: 45%;
@@ -720,7 +771,8 @@ hr {
 
 .error {
   color: #fff;
-  background-color: $softRed;
+  // background-color: $softRed;
+  background-color: var(--clr-secondary);
   border-radius: 2px;
   padding: 2px 50px;
   font-size:12px;
@@ -743,7 +795,8 @@ hr {
   padding: 15px 35px;
   border-radius: 5px;
   border: none;
-  background-color: $softRed;
+  // background-color: $softRed;
+  background-color: var(--clr-secondary);
   box-shadow: 1px 2px 1px rgb(53, 50, 50);
   color: #fff;
   cursor: pointer;
@@ -793,7 +846,8 @@ hr {
     }
 
     li a:hover {
-      color: $softRed;
+      // color: $softRed;
+      color: var(--clr-secondary);
     }
 
     .ftr-2-flex {
@@ -812,7 +866,8 @@ hr {
 
     // to add hover effect to the logo
     .logo:hover {
-      stroke: $softRed;
+      // stroke: $softRed;
+      stroke: var(--clr-secondary);
     }
   }
 }

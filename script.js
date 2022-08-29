@@ -88,8 +88,8 @@ btns.forEach(function (btn) {
    });
 });
 
-//Dark mode
-const darkBtn = document.querySelector('.dark-mode');
+//Dark mode but doesnt toggle (Alternative but not the best)
+/*const darkBtn = document.querySelector('.dark-mode');
 
 darkBtn.addEventListener("click", function () {
   const body = document.getElementById("body");
@@ -140,9 +140,15 @@ darkBtn.addEventListener("click", function () {
   menuBtn.forEach(function (btn) {
     btn.style.backgroundColor = "#fff";
   });
-});
+});*/
 
-   
+// Dark mode toggle button and better
+const toggleBtn = document.querySelector('.dark-mode');
+
+toggleBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark-theme');
+}); 
+
 // Email Verification
 const submitBtn = document.getElementById('submit');
 

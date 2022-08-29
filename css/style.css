@@ -1,8 +1,33 @@
+:root {
+  --clr-bcg: #fff;
+  --clr-header: hsl(229, 31%, 21%);
+  --clr-font: hsl(229, 8%, 60%);
+  --clr-primary: hsl(231, 61%, 41%);
+  --clr-secondary: hsl(0, 62%, 50%);
+  --clr-boxShadow1: 10px 10px 30px #ebe6e671;
+  --clr-boxShadow2: -10px -10px 30px #e0e0e0;
+  --clr-boxBreak: rgb(206, 201, 201);
+  --clr-boxBcg: rgba(255, 250, 250, 0.6);
+}
+
+.dark-theme {
+  --clr-bcg: #121212;
+  --clr-header: hsl(229, 50%, 44%);
+  --clr-font: #fff;
+  --clr-primary: hsl(231, 61%, 41%);
+  --clr-secondary: hsl(0, 62%, 50%);
+  --clr-boxShadow1: 10px 10px 30px #000;
+  --clr-boxShadow2: -10px -10px 30px #000;
+  --clr-boxBreak: #000;
+  --clr-boxBcg: #fff;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  background-color: var(--clr-bcg);
 }
 
 .dark-mode {
@@ -47,14 +72,14 @@ nav li {
   display: inline;
 }
 nav li a {
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   padding: 10px 16px;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
 }
 nav li a:hover {
-  color: hsl(0deg, 94%, 66%);
+  color: var(--clr-secondary);
 }
 nav .nav-button {
   padding: 12px 34px;
@@ -62,15 +87,15 @@ nav .nav-button {
   border-radius: 5px;
   border: none;
   left: 30px;
-  background-color: hsl(0deg, 94%, 66%);
+  background-color: var(--clr-secondary);
   color: hsl(225deg, 29%, 97%);
   cursor: pointer;
   font-weight: 600;
 }
 nav .nav-button:hover {
   background-color: #fff;
-  color: hsl(0deg, 94%, 66%);
-  border: 2px solid hsl(0deg, 94%, 66%);
+  color: hsl(0deg, 62%, 50%);
+  border: 2px solid hsl(0deg, 62%, 50%);
 }
 
 .mobile {
@@ -81,6 +106,7 @@ nav .nav-button:hover {
 /* Mobile Nav bar*/
 .show-modal {
   cursor: pointer;
+  background-color: var(--clr-boxBcg);
 }
 
 .modal {
@@ -182,7 +208,7 @@ hr {
   width: 50%;
   height: 50%;
   position: absolute;
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: var(--clr-primary);
   right: -1%;
   top: 50%;
   border-top-left-radius: 150px;
@@ -198,7 +224,7 @@ hr {
 }
 .intro-1 .intro-header {
   font-size: 35px;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   font-weight: 500;
   width: 105%;
   height: 34%;
@@ -206,7 +232,7 @@ hr {
 .intro-1 .intro-paragraph {
   width: 75%;
   height: 24%;
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-font);
   font-size: 18px;
 }
 .intro-1 .intro-button {
@@ -217,7 +243,7 @@ hr {
   padding: 15px 15px;
   border-radius: 8px;
   border: none;
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: var(--clr-primary);
   box-shadow: 3px 3px 3px rgb(53, 50, 50);
   color: #fff;
   cursor: pointer;
@@ -229,13 +255,13 @@ hr {
 }
 .intro-1 .intro-button-1:hover, .intro-1 .intro-button-2:hover {
   background-color: #fff;
-  color: hsl(231deg, 69%, 60%);
-  border: 2px solid hsl(231deg, 69%, 60%);
+  color: hsl(231deg, 61%, 41%);
+  border: 2px solid hsl(231deg, 61%, 41%);
 }
 .intro-1 .intro-button-2:hover {
   background-color: #fff;
-  color: hsl(229deg, 31%, 21%);
-  border: 2px solid hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
+  border: 2px solid --clr-header;
 }
 
 .nxt {
@@ -247,12 +273,12 @@ hr {
 }
 .nxt .nxt-header {
   font-size: 30px;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   margin-bottom: -20px;
 }
 .nxt .nxt-paragraph {
   font-size: 18px;
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-font);
   width: 35%;
   height: 10%;
   text-align: center;
@@ -269,17 +295,17 @@ hr {
 }
 
 .select > a:link {
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-font);
   text-decoration: none;
 }
 
 .select > a:visited {
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   text-decoration: none;
 }
 
 .select > a:hover {
-  color: hsl(0deg, 94%, 66%);
+  color: var(--clr-secondary);
 }
 
 .line-1 {
@@ -287,8 +313,8 @@ hr {
   margin-top: 20px;
   margin-left: 280px;
   margin-right: 800px;
-  border: 3px solid hsl(0deg, 94%, 66%);
-  background-color: hsl(0deg, 94%, 66%);
+  border: 3px solid --clr-secondary;
+  background-color: var(--clr-secondary);
 }
 
 .line-2 {
@@ -321,7 +347,7 @@ hr {
   width: 40%;
   height: 50%;
   position: absolute;
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: var(--clr-primary);
   left: -1%;
   top: 190%;
   border-top-right-radius: 150px;
@@ -336,7 +362,7 @@ hr {
 .btn-2 h2 {
   font-size: 35px;
   margin-bottom: 25px;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
 }
 .btn-2 p {
   font-size: 20px;
@@ -344,13 +370,13 @@ hr {
   height: 30%;
   margin-top: -2px;
   margin-bottom: 30px;
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-font);
 }
 .btn-2 .btn-button {
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: var(--clr-primary);
   box-shadow: 1px 2px 1px rgb(53, 50, 50);
   color: #fff;
   cursor: pointer;
@@ -358,8 +384,8 @@ hr {
 }
 .btn-2 .btn-button:hover {
   background-color: #fff;
-  color: hsl(231deg, 69%, 60%);
-  border: 2px solid hsl(231deg, 69%, 60%);
+  color: hsl(231deg, 61%, 41%);
+  border: 2px solid hsl(231deg, 61%, 41%);
 }
 
 .ext {
@@ -370,7 +396,7 @@ hr {
 }
 .ext .ext-header {
   font-size: 23px;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   font-weight: 500;
 }
 .ext .ext-paragraph {
@@ -379,7 +405,7 @@ hr {
   width: 39%;
   height: 10%;
   text-align: center;
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-font);
 }
 
 .box {
@@ -392,10 +418,11 @@ hr {
 .box-1, .box-3, .box-2 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 250, 250, 0.6);
+  background-color: var(--clr-boxBcg);
   padding: 30px 50px 0 50px;
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(235, 230, 230, 0.4431372549), -10px -10px 30px #e0e0e0;
+  box-shadow: var(--clr-boxShadow1), var(--clr-boxShadow2);
 }
 
 .box--1 {
@@ -415,7 +442,7 @@ hr {
 .box-header {
   font-size: 18px;
   font-weight: 500;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   text-align: center;
   margin-bottom: 15px;
   margin-top: 40px;
@@ -423,16 +450,16 @@ hr {
 
 .box-paragraph {
   font-size: 16px;
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-boxBreak);
   text-align: center;
 }
 
 .box-break {
   margin-top: 50px;
   margin-bottom: 15%;
-  margin-left: -28%;
-  margin-right: -28%;
-  border: 2px dashed rgb(206, 201, 201);
+  margin-left: -25%;
+  margin-right: -25%;
+  border: 2px dashed var(--clr-boxBreak);
   border-width: 2px;
   height: 2px;
 }
@@ -445,7 +472,7 @@ hr {
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: var(--clr-primary);
   box-shadow: 1px 1px 1px rgb(53, 50, 50);
   color: #fff;
   cursor: pointer;
@@ -460,8 +487,8 @@ hr {
 .box-button-2:hover,
 .box-button-3:hover {
   background-color: #fff;
-  color: hsl(231deg, 69%, 60%);
-  border: 2px solid hsl(231deg, 69%, 60%);
+  color: hsl(231deg, 61%, 41%);
+  border: 2px solid hsl(231deg, 61%, 41%);
 }
 
 .bgd {
@@ -479,7 +506,7 @@ hr {
 
 .bgd-header {
   font-size: 30px;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   margin-bottom: -2px;
 }
 
@@ -487,7 +514,7 @@ hr {
   font-size: 20px;
   width: 39%;
   height: 10%;
-  color: hsl(229deg, 8%, 60%);
+  color: var(--clr-font);
 }
 
 .bkm {
@@ -530,7 +557,7 @@ hr {
 
 .bkm-header {
   font-size: 23px;
-  color: hsl(229deg, 31%, 21%);
+  color: var(--clr-header);
   margin-top: 28px;
   margin-bottom: 3px;
   cursor: pointer;
@@ -548,7 +575,7 @@ hr {
 }
 
 .bkm-header:hover {
-  color: hsl(0deg, 94%, 66%);
+  color: var(--clr-secondary);
 }
 
 .bkm-logo-1,
@@ -582,7 +609,7 @@ hr {
   padding: 15px 20px;
   border-radius: 8px;
   border: none;
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: var(--clr-primary);
   box-shadow: 1px 2px 1px rgb(53, 50, 50);
   color: #fff;
   margin-left: 45%;
@@ -593,12 +620,12 @@ hr {
 
 .bgd-button:hover {
   background-color: #fff;
-  color: hsl(231deg, 69%, 60%);
-  border: 2px solid hsl(231deg, 69%, 60%);
+  color: hsl(231deg, 61%, 41%);
+  border: 2px solid hsl(231deg, 61%, 41%);
 }
 
 .ftr {
-  background-color: hsl(231deg, 69%, 60%);
+  background-color: hsl(231deg, 61%, 41%);
   margin-top: 10%;
   width: 101%;
 }
@@ -642,7 +669,7 @@ hr {
 
 .error {
   color: #fff;
-  background-color: hsl(0deg, 94%, 66%);
+  background-color: var(--clr-secondary);
   border-radius: 2px;
   padding: 2px 50px;
   font-size: 12px;
@@ -665,7 +692,7 @@ hr {
   padding: 15px 35px;
   border-radius: 5px;
   border: none;
-  background-color: hsl(0deg, 94%, 66%);
+  background-color: var(--clr-secondary);
   box-shadow: 1px 2px 1px rgb(53, 50, 50);
   color: #fff;
   cursor: pointer;
@@ -676,8 +703,8 @@ hr {
 
 .ftr-button:hover {
   background-color: #fff;
-  color: hsl(0deg, 94%, 66%);
-  border: 2px solid hsl(0deg, 94%, 66%);
+  color: hsl(0deg, 62%, 50%);
+  border: 2px solid hsl(0deg, 62%, 50%);
 }
 
 .ftr-2 {
@@ -710,7 +737,7 @@ hr {
   font-size: 20px;
 }
 .ftr-2 nav li a:hover {
-  color: hsl(0deg, 94%, 66%);
+  color: var(--clr-secondary);
 }
 .ftr-2 nav .ftr-2-flex {
   display: flex;
@@ -724,7 +751,7 @@ hr {
   height: 70%;
 }
 .ftr-2 nav .logo:hover {
-  stroke: hsl(0deg, 94%, 66%);
+  stroke: var(--clr-secondary);
 }
 
 @media screen and (max-width: 400px) {
