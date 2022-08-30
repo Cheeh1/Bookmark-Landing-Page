@@ -32,6 +32,7 @@ $Weights2: 500;
   --clr-boxShadow2: -10px -10px 30px #e0e0e0;
   --clr-boxBreak: rgb(206, 201, 201);
   --clr-boxBcg: rgba(255, 250, 250, 0.6);
+  --clr-btnshadow: rgb(53, 50, 50);
 }
 
 .dark-theme {
@@ -44,6 +45,7 @@ $Weights2: 500;
   --clr-boxShadow2: -10px -10px 30px #000;
   --clr-boxBreak: #000;
   --clr-boxBcg: #fff;
+  --clr-btnshadow: #000;
 }
 
 body {
@@ -292,7 +294,7 @@ hr {
     border: none;
     // background-color: $softBlue;
     background-color: var(--clr-primary);
-    box-shadow: 3px 3px 3px rgb(53, 50, 50);
+    box-shadow: 3px 3px 3px var(--clr-btnshadow);
     color: #fff;
     cursor: pointer;
     font-weight: 600;
@@ -456,7 +458,7 @@ hr {
     border: none;
     // background-color: $softBlue;
     background-color: var(--clr-primary);
-    box-shadow: 1px 2px 1px rgb(53, 50, 50);
+    box-shadow: 1px 2px 1px var(--clr-btnshadow);
     color: #fff;
     cursor: pointer;
     font-weight: 600;
@@ -562,7 +564,7 @@ hr {
   border: none;
   // background-color: $softBlue;
   background-color: var(--clr-primary);
-  box-shadow: 1px 1px 1px rgb(53, 50, 50);
+  box-shadow: 1px 1px 1px var(--clr-btnshadow);
   color: #fff;
   cursor: pointer;
   font-weight: 600;
@@ -713,7 +715,7 @@ hr {
   border: none;
   // background-color: $softBlue;
   background-color: var(--clr-primary);
-  box-shadow: 1px 2px 1px rgb(53, 50, 50);
+  box-shadow: 1px 2px 1px var(--clr-btnshadow);
   color: #fff;
   margin-left: 45%;
   margin-top: 4%;
@@ -797,7 +799,7 @@ hr {
   border: none;
   // background-color: $softRed;
   background-color: var(--clr-secondary);
-  box-shadow: 1px 2px 1px rgb(53, 50, 50);
+  box-shadow: 1px 2px 1px var(--clr-btnshadow);
   color: #fff;
   cursor: pointer;
   margin-left: 5%;
