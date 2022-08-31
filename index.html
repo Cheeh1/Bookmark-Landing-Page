@@ -24,7 +24,7 @@
 
     <title>Bookmark landing page</title>
   </head>
-  <body id="body">
+  <body>
     <header>
       <button class="dark-mode"> Dark Mode</button>
 
@@ -33,9 +33,9 @@
     
         <div class="nav-flex">
           <ul>
-            <li><a id="head" href="#features" class="hvr-grow-shadow">Features</a></li>
-            <li><a id="head" href="#pricing" class="hvr-grow-shadow">Pricing</a></li>
-            <li><a id="head" href="#contact" class="hvr-grow-shadow">Contact</a></li>
+            <li><a href="#features" class="hvr-grow-shadow">Features</a></li>
+            <li><a href="#pricing" class="hvr-grow-shadow">Pricing</a></li>
+            <li><a href="#contact" class="hvr-grow-shadow">Contact</a></li>
           </ul>
           <div class="hvr-buzz">
             <input class="nav-button" type="button" value="LOGIN" />
@@ -70,14 +70,14 @@
           </div>
     
           <div class="text-flex">
-            <hr id="line-mobile" />
-            <p class="text features">FEATURES</p>
-            <hr id="line-mobile" />
-            <p class="text pricing">PRICING</p>
-            <hr id="line-mobile" />
-            <p class="text contact">CONTACT</p>
-            <hr id="line-mobile" />
-            <p class="text login">LOGIN</p>
+            <hr/>
+            <a class="text features" href="#features">FEATURES</a>
+            <hr/>
+            <a class="text pricing">PRICING</a>
+            <hr/>
+            <a class="text contact" href="#contact">CONTACT</a>
+            <hr/>
+            <a class="text login">LOGIN</a>
           </div>
         </div>
     
@@ -88,11 +88,11 @@
     <main>
       <article class="intro">
         <section class="intro-1">
-          <div id="head" class="intro-header">
+          <div class="intro-header">
             <h2>A Simple Bookmark Manager</h2>
           </div>
 
-          <div id="text" class="intro-paragraph">
+          <div class="intro-paragraph">
             <p>
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
@@ -123,10 +123,10 @@
 
       <article>
         <section class="nxt">
-          <div id="head" class="nxt-header">
+          <div id="features" class="nxt-header">
             <h3>Features</h3>
           </div>
-          <div id="text" class="nxt-paragraph">
+          <div class="nxt-paragraph">
             <p>
               Our aim is to make it quick and easy for you to access your
               favourite websites. Your bookmarks sync between your devices so
@@ -138,16 +138,16 @@
 
       <article class="item">
         <section class="select">
-          <hr id="line" class="line-mobile">
+          <hr class="line-mobile">
           <a class="link frstLink" href="#simple">Simple Bookmarking</a>
-          <hr id="line" class="line-mobile">
+          <hr class="line-mobile">
           <a class="link scndLink" href="#speedy">Speedy Searching</a>
-          <hr id="line" class="line-mobile">
+          <hr class="line-mobile">
           <a class="link thirdLink" href="#easy">Easy Sharing</a>
         </section>
       
         <hr class="line-1" />
-        <hr id="line" class="line-2" />
+        <hr class="line-2" />
       
         <section class="btn frst-tab">
           <div>
@@ -156,10 +156,10 @@
       
           <div class="btn-2 tab-1">
             <div>
-              <h2 id="head">Bookmark in one click</h2>
+              <h2>Bookmark in one click</h2>
             </div>
             <div>
-              <p id="text">
+              <p>
                 Organize your bookmarks however you like. Our simple
                 drag-and-drop interface gives you complete control over how you
                 manage your favourite sites.
@@ -177,10 +177,10 @@
           </div>
           <div class="btn-2 tab-2">
             <div>
-              <h2 id="head">Intelligent search</h2>
+              <h2>Intelligent search</h2>
             </div>
             <div>
-              <p id="text">
+              <p>
                 Our powerful search feature will help you find saved sites in no time at all. No need to
                 trawl through all
                 of your bookmarks.
@@ -199,10 +199,10 @@
       
           <div class="btn-2 tab-3">
             <div>
-              <h2 id="head">Share your bookmarks</h2>
+              <h2>Share your bookmarks</h2>
             </div>
             <div>
-              <p id="text">
+              <p>
                 Easily share your bookmarks and collections with others. Create a shareable link that you
                 can send at the click of a button.
               </p>
@@ -217,10 +217,10 @@
       <article>
         <section class="ext">
           <div class="ext-header">
-            <h2 id="head">Download the extension</h2>
+            <h2>Download the extension</h2>
           </div>
           <div class="ext-paragraph">
-            <p id="text">
+            <p>
               We’ve got more browsers in the pipeline. Please do let us know if
               you’ve got a favourite you’d like us to prioritize.
             </p>
@@ -229,49 +229,49 @@
       </article>
       
       <article class="box">
-        <section id="box-shadow" class="box-1 box--1">
+        <section class="box-1 box--1">
           <div>
             <img class="box-img" src="images\logo-chrome.svg" alt="logo" />
           </div>
-          <div id="head" class="box-header">
+          <div class="box-header">
             <h3>Add to Chrome</h3>
           </div>
           <div class="box-paragraph">
             <p>Minimum version 62</p>
           </div>
-          <hr id="line" class="box-break" />
+          <hr class="box-break" />
           <div>
             <input class="box-button-1 hvr-float-shadow" type="button" value="Add & Install Extension" />
           </div>
         </section>
       
-        <section id="box-shadow" class="box-2">
+        <section class="box-2">
           <div>
             <img class="box-img" src="images\logo-firefox.svg" alt="logo" />
           </div>
-          <div id="head" class="box-header">
+          <div class="box-header">
             <h3>Add to Firefox</h3>
           </div>
           <div class="box-paragraph">
             <p>Minimum version 55</p>
           </div>
-          <hr id="line" class="box-break" />
+          <hr class="box-break" />
           <div>
             <input class="box-button-2 hvr-float-shadow" type="button" value="Add & Install Extension" />
           </div>
         </section>
       
-        <section id="box-shadow" class="box-3">
+        <section class="box-3">
           <div>
             <img class="box-img" src="images\logo-opera.svg" alt="logo" />
           </div>
-          <div id="head" class="box-header">
+          <div class="box-header">
             <h3>Add to Opera</h3>
           </div>
           <div class="box-paragraph">
             <p>Minimum version 46</p>
           </div>
-          <hr id="line" class="box-break" />
+          <hr class="box-break" />
           <div>
             <input class="box-button-3 hvr-float-shadow" type="button" value="Add & Install Extension" />
           </div>
@@ -281,8 +281,8 @@
       <article class="bgd">
         <section>
           <div class="bgd-1">
-            <h3 id="head" class="bgd-header">Frequently Asked Questions</h3>
-            <p id="text" class="bgd-paragraph">
+            <h3 class="bgd-header">Frequently Asked Questions</h3>
+            <p class="bgd-paragraph">
               Here are some of our FAQs. If you have any other questions you’d
               like answered please feel free to email us.
             </p>
@@ -291,7 +291,7 @@
 
         <section class="bkm">
           <div>
-            <hr id="line" class="bkm-break-1 bkm-brk" />
+            <hr class="bkm-break-1 bkm-brk" />
             <div class="bkm-flex">
               <h4 id="btn" class="bkm-header">What is Bookmark?</h4>
               <svg
@@ -314,7 +314,7 @@
           </div>
 
           <div>
-            <hr id="line" class="bkm-break-2" />
+            <hr class="bkm-break-2" />
             <div class="bkm-flex">
               <h4 id="btn02" class="bkm-header">How can I request a new browser?</h4>
               <svg
@@ -337,7 +337,7 @@
           </div>
 
           <div>
-            <hr id="line" class="bkm-break-3" />
+            <hr class="bkm-break-3" />
             <div class="bkm-flex">
               <h4 id="btn03" class="bkm-header">Is there a mobile app?</h4>
               <svg
@@ -360,7 +360,7 @@
           </div>
 
           <div>
-            <hr id="line" class="bkm-break-4" />
+            <hr class="bkm-break-4" />
             <div class="bkm-flex">
               <h4 id="btn04" class="bkm-header">What about other Chromium browsers?</h4>
               <svg
@@ -380,7 +380,7 @@
             </div>
             <p id="txt04" class="bkm-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam doloremque temporibus officia modi. Ex consequuntur tempora quibusdam,
               quas a optio culpa eum odio minima recusandae inventore nostrum unde, provident itaque.</p>
-            <hr id="line" class="bkm-break-5" />
+            <hr class="bkm-break-5" />
           </div>
         </section>
 
@@ -390,7 +390,7 @@
       </article>
 
       <footer>
-        <section class="ftr">
+        <section id="contact" class="ftr">
           <div class="ftr-1">
             <p class="ftr-paragraph">35,000+ already joined</p>
             <h3 class="ftr-header">Stay up-to-date with what we’re doing</h3>

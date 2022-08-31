@@ -48,6 +48,10 @@ $Weights2: 500;
   --clr-btnshadow: #000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -187,6 +191,7 @@ hr {
   color: #fff;
   font-weight: 500;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
 .pricing {
