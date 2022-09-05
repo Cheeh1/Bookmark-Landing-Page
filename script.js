@@ -169,3 +169,61 @@ submitBtn.addEventListener('click', function () {
       return false;
    }
 });
+
+
+// Animation using GSAP.js
+
+  // Header Animatiom
+  gsap.from(".intro-header", {scrollTrigger: ".intro", y:-200, duration: 1});
+  gsap.from(".scnd-nav", {scrollTrigger: ".intro", y:-50, duration: 1});
+
+  // Intro
+  gsap.from(".intro-paragraph", {scrollTrigger: ".intro",x:-150, duration: 1});
+  gsap.from(".intro-button", {scrollTrigger: ".intro", y:50, duration: 1});
+  gsap.from(".intro-img", {scrollTrigger: ".intro", x:200, duration: 2});
+  gsap.from(".hide-1", {scrollTrigger: "nav", y:-50, duration: 1});
+
+  // Nxt
+  gsap.from(".nxt-header", {scrollTrigger: ".nxt-header", y:-150, duration: 1});
+  gsap.from(".nxt-paragraph", {scrollTrigger: ".nxt-paragraph", y:-150, duration: 1});
+
+  // Select
+  gsap.from(".select", {scrollTrigger: ".link", y:-100, duration: 1});
+  gsap.from(".line-2", {scrollTrigger: ".link", y:50, duration: 1});
+
+  // Btn
+  gsap.from(".btn-img", {scrollTrigger: ".btn", x:-250, duration: 2});
+  gsap.from(".btn-2-header", {scrollTrigger: ".btn-2-header", y:100, duration: 1});
+  gsap.from(".btn-2-paragraph", {scrollTrigger: ".btn-2-paragraph", y:100, duration: 1});
+  gsap.from(".btn-button", {scrollTrigger: ".btn-2-paragraph", y:100, duration: 1});
+
+  // Ext
+  gsap.from(".ext-header", {scrollTrigger: ".ext", y:-150, duration: 1});
+  gsap.from(".ext-paragraph", {scrollTrigger: ".ext", y:150, duration: 1});
+ 
+  // BOX
+gsap.from(".box-1", {scrollTrigger: ".box-1", y:200, duration: 1})
+gsap.from(".box-2", {scrollTrigger: ".box-2", y:200, duration: 1})
+gsap.from(".box-3", {scrollTrigger: ".box-3", y:200, duration: 1})
+
+  // Bgd
+gsap.from(".bgd-header", {scrollTrigger: ".bgd", y:-100, duration: 1})
+gsap.from(".bgd-paragraph", {scrollTrigger: ".bgd", y:100, duration: 1})
+
+  // Bkm
+gsap.from(".bkm-break-1, .bkm-break-2, .bkm-break-3, .bkm-break-4, .bkm-break-5", {scrollTrigger: ".bkm", y:100, duration: 1})
+gsap.from(".bkm-flex", {scrollTrigger: ".bkm-flex", y:-100, duration: 2})
+gsap.from(".bgd-button", {scrollTrigger: ".bgd-button", y:150, duration: 1})
+
+  // Ftr
+gsap.from(".ftr", {scrollTrigger: ".ftr", y:200, duration: 1})
+gsap.from(".ftr-paragraph", {scrollTrigger: ".ftr", y:-100, duration: 1})
+gsap.from(".ftr-header", {scrollTrigger: ".ftr", y:-100, duration: 1})
+gsap.from(".ftr-input", {scrollTrigger: ".ftr", y:150, duration: 1})
+gsap.from(".ftr-button", {scrollTrigger: ".ftr-i", y:150, duration: 2})
+
+  // Ftr-2
+  gsap.from(".ftr-2", {scrollTrigger: ".ftr", y:100, duration: 1})
+  gsap.from(".ftr-2-logo", {scrollTrigger: ".ftr", x:-500, duration: 2})
+  gsap.from(".ftr-2-nav", {scrollTrigger: ".ftr", y:200, duration: 2})
+  gsap.from(".ftr-2-flex", {scrollTrigger: ".ftr", x:500, duration: 2})
